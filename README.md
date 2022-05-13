@@ -1,10 +1,13 @@
 # PasswordManager
 
-Proiect IP 2022
+Proiect IP - 2022
 
-1307A - Luca Silviu-Catalin 
+1307A - Luca Silviu-Catalin
+
 1307A - Grabovschi Adrian 
+
 1307A - Tarziu Matei-Stefan 
+
 1308B - Draganescu Bianca-Andreea
 
 **Tema proiectului**: Manager pentru parole
