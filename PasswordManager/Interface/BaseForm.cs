@@ -10,17 +10,15 @@ using System.Windows.Forms;
 
 namespace Interface
 {
-    public partial class Form1 : Form
+    public partial class BaseForm : Form
     {
-        public Form1()
+        public BaseForm()
         {
             InitializeComponent();
-        }
 
-        private void buttonTest_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(DataBaseManager.Test.TestDependency());
-            MessageBox.Show(SecurityUtility.Test.SecurityTest());
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
         }
     }
 }
