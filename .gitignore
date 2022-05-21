@@ -1,13 +1,3 @@
 **/.vs
-
-PasswordManager/Interface/bin/**
-PasswordManager/Interface/obj/**
-
-PasswordManager/SecurityUtility/bin/**
-PasswordManager/SecurityUtility/obj/**
-
-PasswordManager/DataBaseManager/bin/**
-PasswordManager/DataBaseManager/obj/**
-
-PasswordManager/Utility/bin/**
-PasswordManager/Utility/obj/**
+bin/
+obj/
