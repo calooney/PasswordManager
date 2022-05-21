@@ -1,0 +1,187 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\Facultate\\An_3\\Sem 2\\Proiect IP\\PasswordManager\\PasswordManager\\DataBaseManagerTestApp\\DataBaseManagerTestApp.csproj": {}
+  },
+  "projects": {
+    "E:\\Facultate\\An_3\\Sem 2\\Proiect IP\\PasswordManager\\PasswordManager\\DataBaseManagerTestApp\\DataBaseManagerTestApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Facultate\\An_3\\Sem 2\\Proiect IP\\PasswordManager\\PasswordManager\\DataBaseManagerTestApp\\DataBaseManagerTestApp.csproj",
+        "projectName": "DataBaseManagerTestApp",
+        "projectPath": "E:\\Facultate\\An_3\\Sem 2\\Proiect IP\\PasswordManager\\PasswordManager\\DataBaseManagerTestApp\\DataBaseManagerTestApp.csproj",
+        "packagesPath": "C:\\Users\\Adrian Grabovschi\\.nuget\\packages\\",
+        "outputPath": "E:\\Facultate\\An_3\\Sem 2\\Proiect IP\\PasswordManager\\PasswordManager\\DataBaseManagerTestApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Adrian Grabovschi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\Facultate\\An_3\\Sem 2\\Proiect IP\\PasswordManager\\PasswordManager\\DataBaseManager\\DataBaseManager.csproj": {
+                "projectPath": "E:\\Facultate\\An_3\\Sem 2\\Proiect IP\\PasswordManager\\PasswordManager\\DataBaseManager\\DataBaseManager.csproj"
+              },
+              "E:\\Facultate\\An_3\\Sem 2\\Proiect IP\\PasswordManager\\PasswordManager\\Utility\\Utility.csproj": {
+                "projectPath": "E:\\Facultate\\An_3\\Sem 2\\Proiect IP\\PasswordManager\\PasswordManager\\Utility\\Utility.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Facultate\\An_3\\Sem 2\\Proiect IP\\PasswordManager\\PasswordManager\\DataBaseManager\\DataBaseManager.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Facultate\\An_3\\Sem 2\\Proiect IP\\PasswordManager\\PasswordManager\\DataBaseManager\\DataBaseManager.csproj",
+        "projectName": "DataBaseManager",
+        "projectPath": "E:\\Facultate\\An_3\\Sem 2\\Proiect IP\\PasswordManager\\PasswordManager\\DataBaseManager\\DataBaseManager.csproj",
+        "packagesPath": "C:\\Users\\Adrian Grabovschi\\.nuget\\packages\\",
+        "outputPath": "E:\\Facultate\\An_3\\Sem 2\\Proiect IP\\PasswordManager\\PasswordManager\\DataBaseManager\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Adrian Grabovschi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\Facultate\\An_3\\Sem 2\\Proiect IP\\PasswordManager\\PasswordManager\\Utility\\Utility.csproj": {
+                "projectPath": "E:\\Facultate\\An_3\\Sem 2\\Proiect IP\\PasswordManager\\PasswordManager\\Utility\\Utility.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Facultate\\An_3\\Sem 2\\Proiect IP\\PasswordManager\\PasswordManager\\Utility\\Utility.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Facultate\\An_3\\Sem 2\\Proiect IP\\PasswordManager\\PasswordManager\\Utility\\Utility.csproj",
+        "projectName": "Utility",
+        "projectPath": "E:\\Facultate\\An_3\\Sem 2\\Proiect IP\\PasswordManager\\PasswordManager\\Utility\\Utility.csproj",
+        "packagesPath": "C:\\Users\\Adrian Grabovschi\\.nuget\\packages\\",
+        "outputPath": "E:\\Facultate\\An_3\\Sem 2\\Proiect IP\\PasswordManager\\PasswordManager\\Utility\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Adrian Grabovschi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
