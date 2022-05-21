@@ -35,18 +35,18 @@ namespace Interface
             textBoxPassword.Text = "";
         }
 
-        private void buttonSignIn_Click(object sender, EventArgs e)
+        private void buttonSignUp_Click(object sender, EventArgs e)
         {
-            (new SignInForm()).Show();
+            (new SignUpForm()).Show();
         }
 
         private void buttonTest_Click(object sender, EventArgs e)
         {
-            SecurityUtility.SecurityManager securityManager = new SecurityUtility.SecurityManager("P@ssaawaaa0rd!");
-
-            byte[] test = securityManager.EncryptData("MuieRazvan");
-            MessageBox.Show(BitConverter.ToString(test).Replace("-", ""));
-            MessageBox.Show(securityManager.DecryptData(test));
+            SecurityUtility.SecurityManager securityManager = new SecurityUtility.SecurityManager("P@saw0rd!");
+            
+            //byte[] test = securityManager.EncryptData("MuieRazvan");
+            //string test = securityManager.ComputeKeyHash();
+            //MessageBox.Show(test);
         }
     }
 }

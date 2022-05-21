@@ -34,7 +34,17 @@ namespace Interface
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            listBoxEntries.Items.Add("Item ASDASDASD");
+            (new AddEntryForm()).Show();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonEditEntry_Click(object sender, EventArgs e)
+        {
+            (new EditEntryForm(1)).Show();
         }
     }
 }
