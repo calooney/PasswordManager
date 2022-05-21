@@ -35,7 +35,7 @@ namespace Interface
             this.labelUsername = new System.Windows.Forms.Label();
             this.labelPassword = new System.Windows.Forms.Label();
             this.buttonLogin = new System.Windows.Forms.Button();
-            this.buttonSignIn = new System.Windows.Forms.Button();
+            this.buttonSignUp = new System.Windows.Forms.Button();
             this.pictureBoxMainLogo = new System.Windows.Forms.PictureBox();
             this.buttonTest = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMainLogo)).BeginInit();
@@ -48,6 +48,7 @@ namespace Interface
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(200, 23);
             this.textBoxPassword.TabIndex = 3;
+            this.textBoxPassword.UseSystemPasswordChar = true;
             // 
             // textBoxUsername
             // 
@@ -86,15 +87,15 @@ namespace Interface
             this.buttonLogin.UseVisualStyleBackColor = true;
             this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
-            // buttonSignIn
+            // buttonSignUp
             // 
-            this.buttonSignIn.Location = new System.Drawing.Point(524, 464);
-            this.buttonSignIn.Name = "buttonSignIn";
-            this.buttonSignIn.Size = new System.Drawing.Size(75, 23);
-            this.buttonSignIn.TabIndex = 8;
-            this.buttonSignIn.Text = "Sign in";
-            this.buttonSignIn.UseVisualStyleBackColor = true;
-            this.buttonSignIn.Click += new System.EventHandler(this.buttonSignIn_Click);
+            this.buttonSignUp.Location = new System.Drawing.Point(524, 464);
+            this.buttonSignUp.Name = "buttonSignUp";
+            this.buttonSignUp.Size = new System.Drawing.Size(75, 23);
+            this.buttonSignUp.TabIndex = 8;
+            this.buttonSignUp.Text = "Sign up";
+            this.buttonSignUp.UseVisualStyleBackColor = true;
+            this.buttonSignUp.Click += new System.EventHandler(this.buttonSignUp_Click);
             // 
             // pictureBoxMainLogo
             // 
@@ -123,14 +124,14 @@ namespace Interface
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.buttonTest);
             this.Controls.Add(this.pictureBoxMainLogo);
-            this.Controls.Add(this.buttonSignIn);
+            this.Controls.Add(this.buttonSignUp);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelUsername);
             this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.textBoxPassword);
             this.Name = "LoginForm";
-            this.Text = "Form1";
+            this.Text = "Password Manager";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMainLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -144,7 +145,7 @@ namespace Interface
         private System.Windows.Forms.Label labelUsername;
         private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.Button buttonLogin;
-        private System.Windows.Forms.Button buttonSignIn;
+        private System.Windows.Forms.Button buttonSignUp;
         private System.Windows.Forms.PictureBox pictureBoxMainLogo;
         private System.Windows.Forms.Button buttonTest;
     }
