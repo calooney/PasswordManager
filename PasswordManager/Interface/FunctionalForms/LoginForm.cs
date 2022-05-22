@@ -43,10 +43,10 @@ namespace Interface
         private void buttonTest_Click(object sender, EventArgs e)
         {
             SecurityUtility.SecurityManager securityManager = new SecurityUtility.SecurityManager("P@saw0rd!");
-
-            byte[] test = securityManager.EncryptData("MuieRazvan");
-            MessageBox.Show(Convert.ToBase64String(test));
-            MessageBox.Show(securityManager.DecryptData(System.Convert.FromBase64String(Convert.ToBase64String(test))));
+            
+            //byte[] test = securityManager.EncryptData("MuieRazvan");
+            //string test = securityManager.ComputeKeyHash();
+            //MessageBox.Show(test);
         }
     }
 }

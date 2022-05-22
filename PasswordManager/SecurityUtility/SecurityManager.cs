@@ -7,6 +7,11 @@ namespace SecurityUtility
 {
     public class SecurityManager
     {
+        // CONFIG PARAMETERS
+        private readonly int    DERIVE_KEY_LEN      = 256;
+        private readonly int    DERIVE_ITERATIONS   = 9872;
+        private readonly byte[] DERIVAE_SALT        = new byte[] { 1, 2, 23, 234, 37, 48, 134, 63, 248, 4 };
+
         private SymmetricAlgorithm masterPasswordSA;
         private byte[] encryptedMasterPassword;
 
@@ -20,7 +25,7 @@ namespace SecurityUtility
         public byte[] EncryptData(string inputData)
         {
             SymmetricAlgorithm currentAES;
-            currentAES = Derive_Key_From_Password_rfc2898(GetMasterPassword());
+            currentAES = Derive_Key_From_Password_rfc2898(SymmetricalDecryptData(masterPasswordSA, encryptedMasterPassword));
 
             return SymmetricalEncryptData(currentAES, inputData);
         }
@@ -28,12 +33,12 @@ namespace SecurityUtility
         public string DecryptData(byte []encrypteInputData)
         {
             SymmetricAlgorithm currentAES;
-            currentAES = Derive_Key_From_Password_rfc2898(GetMasterPassword());
+            currentAES = Derive_Key_From_Password_rfc2898(SymmetricalDecryptData(masterPasswordSA, encryptedMasterPassword));
             
             return SymmetricalDecryptData(currentAES, encrypteInputData);
         }
 
-        private string Encode_to_SHA256_string(string inputString)
+        public string Encode_to_SHA256_string(string inputString)
         {
             StringBuilder stringBuilder = new StringBuilder();
 
@@ -84,14 +89,12 @@ namespace SecurityUtility
 
         private SymmetricAlgorithm Derive_Key_From_Password_rfc2898(string password)
         {
-            const int DERIVE_KEY_LEN = 256;
-            const int DERIVE_ITERATIONS = 9872;
-            byte[] DERIVAE_SALT = new byte[] { 1, 2, 23, 234, 37, 48, 134, 63, 248, 4 };
-
+            byte[] salt = new byte[] { 1, 2, 23, 234, 37, 48, 134, 63, 248, 4 };
+            const int Iterations = 9872;
 
             SymmetricAlgorithm currentAES = new AesManaged();
             
-            using (var rfc2898DeriveBytes = new Rfc2898DeriveBytes(password, DERIVAE_SALT, DERIVE_ITERATIONS))
+            using (var rfc2898DeriveBytes = new Rfc2898DeriveBytes(password, salt, Iterations))
             {
                 if (!currentAES.ValidKeySize(DERIVE_KEY_LEN))
                     throw new InvalidOperationException("Invalid size key");
@@ -102,21 +105,12 @@ namespace SecurityUtility
             }
         }
 
-        public string ComputeKeyHash()
+        private string ComputeKeyHash()
         {
-            SymmetricAlgorithm currentAES = Derive_Key_From_Password_rfc2898(GetMasterPassword());
-            return Encode_to_SHA256_string(ConvertByteToString(currentAES.Key));
+            SymmetricAlgorithm currentAES = Derive_Key_From_Password_rfc2898(SymmetricalDecryptData(masterPasswordSA, encryptedMasterPassword));
+            return Encode_to_SHA256_string(BitConverter.ToString(currentAES.Key).Replace("-", ""));
         }
 
-        private string GetMasterPassword()
-        {
-            return SymmetricalDecryptData(masterPasswordSA, encryptedMasterPassword);
-        }
-
-        private string ConvertByteToString(byte[] inputByte)
-        {
-            return BitConverter.ToString(inputByte).Replace("-", "");
-        }
 
         public bool ValidatePasswordHash(string hash)
         {
@@ -124,4 +118,3 @@ namespace SecurityUtility
         }
     }
 }
- 
