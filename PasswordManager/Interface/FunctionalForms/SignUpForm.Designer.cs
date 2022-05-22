@@ -51,23 +51,24 @@ namespace Interface
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(399, 315);
+            this.textBoxName.Location = new System.Drawing.Point(456, 420);
+            this.textBoxName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(239, 23);
+            this.textBoxName.Size = new System.Drawing.Size(273, 27);
             this.textBoxName.TabIndex = 0;
             // 
             // textBoxEmail
             // 
             this.textBoxEmail.Location = new System.Drawing.Point(399, 374);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(239, 23);
+            this.textBoxEmail.Size = new System.Drawing.Size(273, 27);
             this.textBoxEmail.TabIndex = 1;
             // 
             // textBoxPassword1
             // 
             this.textBoxPassword1.Location = new System.Drawing.Point(399, 432);
             this.textBoxPassword1.Name = "textBoxPassword1";
-            this.textBoxPassword1.Size = new System.Drawing.Size(239, 23);
+            this.textBoxPassword1.Size = new System.Drawing.Size(273, 27);
             this.textBoxPassword1.TabIndex = 3;
             this.textBoxPassword1.UseSystemPasswordChar = true;
             // 
@@ -75,14 +76,14 @@ namespace Interface
             // 
             this.textBoxTelephone.Location = new System.Drawing.Point(399, 403);
             this.textBoxTelephone.Name = "textBoxTelephone";
-            this.textBoxTelephone.Size = new System.Drawing.Size(239, 23);
+            this.textBoxTelephone.Size = new System.Drawing.Size(273, 27);
             this.textBoxTelephone.TabIndex = 2;
             // 
             // textBoxPassword2
             // 
             this.textBoxPassword2.Location = new System.Drawing.Point(399, 461);
             this.textBoxPassword2.Name = "textBoxPassword2";
-            this.textBoxPassword2.Size = new System.Drawing.Size(239, 23);
+            this.textBoxPassword2.Size = new System.Drawing.Size(273, 27);
             this.textBoxPassword2.TabIndex = 4;
             this.textBoxPassword2.UseSystemPasswordChar = true;
             // 
@@ -90,9 +91,9 @@ namespace Interface
             // 
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelName.Location = new System.Drawing.Point(285, 315);
+            this.labelName.Location = new System.Drawing.Point(326, 420);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(56, 23);
+            this.labelName.Size = new System.Drawing.Size(71, 30);
             this.labelName.TabIndex = 5;
             this.labelName.Text = "Name";
             // 
@@ -102,7 +103,7 @@ namespace Interface
             this.labelEmail.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelEmail.Location = new System.Drawing.Point(285, 374);
             this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(58, 23);
+            this.labelEmail.Size = new System.Drawing.Size(74, 30);
             this.labelEmail.TabIndex = 6;
             this.labelEmail.Text = "e-mail";
             // 
@@ -112,7 +113,7 @@ namespace Interface
             this.labelTelephone.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelTelephone.Location = new System.Drawing.Point(273, 403);
             this.labelTelephone.Name = "labelTelephone";
-            this.labelTelephone.Size = new System.Drawing.Size(88, 23);
+            this.labelTelephone.Size = new System.Drawing.Size(114, 30);
             this.labelTelephone.TabIndex = 7;
             this.labelTelephone.Text = "Telephone";
             // 
@@ -122,7 +123,7 @@ namespace Interface
             this.labelPassword1.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelPassword1.Location = new System.Drawing.Point(273, 432);
             this.labelPassword1.Name = "labelPassword1";
-            this.labelPassword1.Size = new System.Drawing.Size(80, 23);
+            this.labelPassword1.Size = new System.Drawing.Size(103, 30);
             this.labelPassword1.TabIndex = 8;
             this.labelPassword1.Text = "Password";
             // 
@@ -132,7 +133,7 @@ namespace Interface
             this.labelPassword2.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelPassword2.Location = new System.Drawing.Point(252, 461);
             this.labelPassword2.Name = "labelPassword2";
-            this.labelPassword2.Size = new System.Drawing.Size(139, 23);
+            this.labelPassword2.Size = new System.Drawing.Size(178, 30);
             this.labelPassword2.TabIndex = 9;
             this.labelPassword2.Text = "Repeat password";
             // 
@@ -150,7 +151,7 @@ namespace Interface
             // 
             this.buttonClearFields.Location = new System.Drawing.Point(248, 511);
             this.buttonClearFields.Name = "buttonClearFields";
-            this.buttonClearFields.Size = new System.Drawing.Size(75, 23);
+            this.buttonClearFields.Size = new System.Drawing.Size(86, 31);
             this.buttonClearFields.TabIndex = 11;
             this.buttonClearFields.Text = "Clear Fields";
             this.buttonClearFields.UseVisualStyleBackColor = true;
@@ -159,9 +160,10 @@ namespace Interface
             // pictureBoxMainLogo
             // 
             this.pictureBoxMainLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxMainLogo.Image")));
-            this.pictureBoxMainLogo.Location = new System.Drawing.Point(248, 12);
+            this.pictureBoxMainLogo.Location = new System.Drawing.Point(283, 16);
+            this.pictureBoxMainLogo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBoxMainLogo.Name = "pictureBoxMainLogo";
-            this.pictureBoxMainLogo.Size = new System.Drawing.Size(430, 271);
+            this.pictureBoxMainLogo.Size = new System.Drawing.Size(491, 361);
             this.pictureBoxMainLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxMainLogo.TabIndex = 12;
             this.pictureBoxMainLogo.TabStop = false;
@@ -194,7 +196,7 @@ namespace Interface
             // 
             // SignUpForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.labelFeedback);
