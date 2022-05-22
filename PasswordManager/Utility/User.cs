@@ -18,5 +18,10 @@ namespace Utility
             this.email = email;
             this.telephone = telephone;
         }
+
+        public override string ToString()
+        {
+            return $"{name} {username} {password} {email} {telephone}";
+        }
     }
 }
