@@ -33,7 +33,7 @@ namespace Interface
             if (currentUser != null)
                 if (securityManager.ComputeKeyHash() == currentUser.password)
                 {
-                    (new MainForm(this, securityManager, username)).Show();
+                    (new MainForm(this, securityManager, currentUser)).Show();
                     this.Hide();
                     return;
                 }

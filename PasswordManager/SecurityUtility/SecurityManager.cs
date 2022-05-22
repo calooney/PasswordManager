@@ -25,12 +25,12 @@ namespace SecurityUtility
             return Convert.ToBase64String(SymmetricalEncryptData(currentAES, inputData));
         }
 
-        public string DecryptData(byte []encrypteInputData)
+        public string DecryptData(string encrypteInputData)
         {
             SymmetricAlgorithm currentAES;
             currentAES = Derive_Key_From_Password_rfc2898(GetMasterPassword());
             
-            return SymmetricalDecryptData(currentAES, encrypteInputData);
+            return SymmetricalDecryptData(currentAES, Convert.FromBase64String(encrypteInputData));
         }
 
         private string Encode_to_SHA256_string(string inputString)

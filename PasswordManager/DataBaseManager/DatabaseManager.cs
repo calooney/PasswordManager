@@ -48,7 +48,7 @@ namespace DataBaseManager
             Console.WriteLine("Connected to database!");
         }
 
-        public  void AddUser(Utility.User user)
+        public void AddUser(Utility.User user)
         {
             SqlCommand sqlCommand;
 
@@ -121,9 +121,7 @@ namespace DataBaseManager
 
             Console.WriteLine($"Account added succesfully. ID: {id}");
 
- 
             sqlCommand.Dispose();
-            
 
             return id;
 
@@ -136,7 +134,7 @@ namespace DataBaseManager
             SqlDataReader dataReader;
 
 
-            string sql = $"select platform, username, password,  id, extra_info from Accounts where user_id = CONVERT(INT, (select id from Users where username = '{user.username}')) ";
+            string sql = $"select platform, username, password, id, extra_info from Accounts where user_id = CONVERT(INT, (select id from Users where username = '{user.username}'))";
 
             sqlCommand = new SqlCommand(sql, conn);
 
@@ -144,7 +142,7 @@ namespace DataBaseManager
             while(dataReader.Read())
             {
                 //dataReader.GetValues(values);
-                accountList.Add(new UserAccountInfo((string)dataReader.GetValue(0), (string)dataReader.GetValue(1), (string)dataReader.GetValue(2),(int)dataReader.GetValue(3), (string)dataReader.GetValue(4)));
+                accountList.Add(new UserAccountInfo((string)dataReader.GetValue(0), (string)dataReader.GetValue(1), (string)dataReader.GetValue(2), (string)dataReader.GetValue(4), (int)dataReader.GetValue(3)));
             }
 
             return accountList;

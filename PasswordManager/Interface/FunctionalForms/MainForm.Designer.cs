@@ -31,12 +31,13 @@ namespace Interface
         {
             this.buttonSignOut = new System.Windows.Forms.Button();
             this.groupBoxCurrentUser = new System.Windows.Forms.GroupBox();
+            this.buttonRefreshEntries = new System.Windows.Forms.Button();
             this.textBoxPlatform = new System.Windows.Forms.TextBox();
             this.labelPlatform = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.labelPassword = new System.Windows.Forms.Label();
             this.labelUsername = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxExtraInfo = new System.Windows.Forms.RichTextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.listBoxEntries = new System.Windows.Forms.ListBox();
@@ -57,12 +58,13 @@ namespace Interface
             // 
             // groupBoxCurrentUser
             // 
+            this.groupBoxCurrentUser.Controls.Add(this.buttonRefreshEntries);
             this.groupBoxCurrentUser.Controls.Add(this.textBoxPlatform);
             this.groupBoxCurrentUser.Controls.Add(this.labelPlatform);
             this.groupBoxCurrentUser.Controls.Add(this.label1);
             this.groupBoxCurrentUser.Controls.Add(this.labelPassword);
             this.groupBoxCurrentUser.Controls.Add(this.labelUsername);
-            this.groupBoxCurrentUser.Controls.Add(this.richTextBox1);
+            this.groupBoxCurrentUser.Controls.Add(this.richTextBoxExtraInfo);
             this.groupBoxCurrentUser.Controls.Add(this.textBoxPassword);
             this.groupBoxCurrentUser.Controls.Add(this.textBoxUsername);
             this.groupBoxCurrentUser.Controls.Add(this.listBoxEntries);
@@ -76,6 +78,16 @@ namespace Interface
             this.groupBoxCurrentUser.TabStop = false;
             this.groupBoxCurrentUser.Text = "[USER]";
             // 
+            // buttonRefreshEntries
+            // 
+            this.buttonRefreshEntries.Location = new System.Drawing.Point(806, 392);
+            this.buttonRefreshEntries.Name = "buttonRefreshEntries";
+            this.buttonRefreshEntries.Size = new System.Drawing.Size(111, 26);
+            this.buttonRefreshEntries.TabIndex = 14;
+            this.buttonRefreshEntries.Text = "Refresh Entries";
+            this.buttonRefreshEntries.UseVisualStyleBackColor = true;
+            this.buttonRefreshEntries.Click += new System.EventHandler(this.buttonRefreshEntries_Click);
+            // 
             // textBoxPlatform
             // 
             this.textBoxPlatform.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -85,8 +97,6 @@ namespace Interface
             this.textBoxPlatform.ReadOnly = true;
             this.textBoxPlatform.Size = new System.Drawing.Size(408, 29);
             this.textBoxPlatform.TabIndex = 13;
-            this.textBoxPlatform.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxPlatform.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // labelPlatform
             // 
@@ -128,15 +138,15 @@ namespace Interface
             this.labelUsername.TabIndex = 9;
             this.labelUsername.Text = "Username";
             // 
-            // richTextBox1
+            // richTextBoxExtraInfo
             // 
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox1.Location = new System.Drawing.Point(351, 328);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(408, 202);
-            this.richTextBox1.TabIndex = 8;
-            this.richTextBox1.Text = "";
+            this.richTextBoxExtraInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.richTextBoxExtraInfo.Location = new System.Drawing.Point(351, 328);
+            this.richTextBoxExtraInfo.Name = "richTextBoxExtraInfo";
+            this.richTextBoxExtraInfo.ReadOnly = true;
+            this.richTextBoxExtraInfo.Size = new System.Drawing.Size(408, 202);
+            this.richTextBoxExtraInfo.TabIndex = 8;
+            this.richTextBoxExtraInfo.Text = "";
             // 
             // textBoxPassword
             // 
@@ -167,6 +177,7 @@ namespace Interface
             this.listBoxEntries.Name = "listBoxEntries";
             this.listBoxEntries.Size = new System.Drawing.Size(315, 508);
             this.listBoxEntries.TabIndex = 5;
+            this.listBoxEntries.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBoxEntries_MouseDoubleClick);
             // 
             // buttonAddEntry
             // 
@@ -208,7 +219,7 @@ namespace Interface
         private System.Windows.Forms.ListBox listBoxEntries;
         private System.Windows.Forms.Button buttonAddEntry;
         private System.Windows.Forms.Button buttonEditEntry;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox richTextBoxExtraInfo;
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.TextBox textBoxPlatform;
@@ -216,5 +227,6 @@ namespace Interface
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.Label labelUsername;
+        private System.Windows.Forms.Button buttonRefreshEntries;
     }
 }

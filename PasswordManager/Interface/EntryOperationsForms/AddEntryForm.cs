@@ -7,14 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SecurityUtility;
+using DataBaseManager;
+using Utility;
 
 namespace Interface
 {
     public partial class AddEntryForm : BaseForm
     {
-        public AddEntryForm() : base()
+        private SecurityManager _securityManager;
+        private User _currentUser;
+
+        public AddEntryForm(SecurityManager securityManager, User mainUser) : base()
         {
             InitializeComponent();
+
+            _securityManager = securityManager;
+            _currentUser = mainUser;
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
@@ -40,7 +49,17 @@ namespace Interface
             string password = textBoxPassword.Text.Trim();
             string extrInfo = richTextBoxExtraInfo.Text.Trim();
 
+            platform = _securityManager.EncryptData(platform);  
 
+            username = _securityManager.EncryptData(username);
+            password = _securityManager.EncryptData(password);
+            extrInfo = _securityManager.EncryptData(extrInfo);
+
+            UserAccountInfo accountInfo = new UserAccountInfo(platform, username, password, extrInfo);
+            accountInfo.id = DatabaseManager.Instance.AddPlatformInfo(_currentUser, accountInfo);
+
+            MessageBox.Show("Account added!");
+            this.Close();
         }
     }
 }

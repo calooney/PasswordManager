@@ -11,7 +11,7 @@ namespace Utility
         public string platform, username, password, extraInfo;
         public int id;
 
-        public UserAccountInfo(string platform, string username, string password,int id = 0, string extraInfo = null)
+        public UserAccountInfo(string platform, string username, string password, string extraInfo = null, int id = 0)
         {
             this.platform = platform;
             this.username = username;
