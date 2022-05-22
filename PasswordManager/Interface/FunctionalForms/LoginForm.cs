@@ -43,10 +43,6 @@ namespace Interface
         private void buttonTest_Click(object sender, EventArgs e)
         {
             SecurityUtility.SecurityManager securityManager = new SecurityUtility.SecurityManager("P@saw0rd!");
-            
-            //byte[] test = securityManager.EncryptData("MuieRazvan");
-            //string test = securityManager.ComputeKeyHash();
-            //MessageBox.Show(test);
         }
     }
 }
