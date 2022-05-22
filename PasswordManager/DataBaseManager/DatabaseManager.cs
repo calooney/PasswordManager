@@ -11,27 +11,28 @@ namespace DataBaseManager
     public class DatabaseManager
     {
         static SqlConnection conn = null;
-        public static DatabaseManager instance = null;
+        private static DatabaseManager _instance = null;
 
         private static readonly object _lock = new object ();
         public static DatabaseManager Instance
         {
             get
             {
-                if (instance == null)
+                if (_instance == null)
                 {
                     lock (_lock)
+                    {
+                        if (_instance == null)
                         {
-                            if (instance == null)
-                            {
-                                instance = new DatabaseManager();
-                            }
+                            _instance = new DatabaseManager();
                         }
+                    }
                 }
-                return instance;
+                return _instance;
             }
         }
-        DatabaseManager()
+
+        private DatabaseManager()
         {
             string connetionString;
             string workingDirectory = Environment.CurrentDirectory;
@@ -48,11 +49,10 @@ namespace DataBaseManager
             Console.WriteLine("Connected to database!");
         }
 
-        public void AddUser(Utility.User user)
+        public bool AddUser(User user)
         {
+            bool result = true;
             SqlCommand sqlCommand;
-
-            SqlDataAdapter adapter = new SqlDataAdapter();
 
             string sql = $"insert into Users values('{user.username}', '{user.password}', '{user.name}','{user.email}', '{user.telephone}')";
 
@@ -62,10 +62,11 @@ namespace DataBaseManager
             }
             catch(Exception e)
             {
+                result = false;
                 Console.WriteLine(e.Message);
             }
             sqlCommand.Dispose();
-
+            return result;
 
         }
 
@@ -157,10 +158,6 @@ namespace DataBaseManager
 
             string sql = $"update Accounts set username = '{info.username}', password = '{info.password}', platform = '{info.platform}', extra_info = '{info.extraInfo}' where id = {info.id}";
 
-            //string sql = $"select id from Users as u where u.username = '{user.username}'";
-
-            Console.WriteLine(sql);
-
             sqlCommand = new SqlCommand(sql, conn);
 
             try
@@ -175,10 +172,10 @@ namespace DataBaseManager
         }
 
 
-        public void DeleteAccount(UserAccountInfo info)
+        public bool DeleteAccount(UserAccountInfo info)
         {
             SqlCommand sqlCommand;
-
+            bool result = true;
             SqlDataAdapter adapter = new SqlDataAdapter();
             SqlDataReader dataReader;
 
@@ -197,13 +194,42 @@ namespace DataBaseManager
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+                result = false;
             }
             sqlCommand.Dispose();
+           
+            return result;
         }
+
+        public bool DeleteUser(User user)
+        {
+            SqlCommand sqlCommand;
+            bool result = true;
+
+            string sql = $"delete Users where username = '{user.username}'";
+
+            sqlCommand = new SqlCommand(sql, conn);
+
+            try
+            {
+                sqlCommand.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                result = false;
+            }
+            sqlCommand.Dispose();
+
+            return result;
+        }
+
+
 
         ~DatabaseManager()
         {
-            conn.Close();
+            if(conn != null)
+                conn.Close();
         }
     }
 }
