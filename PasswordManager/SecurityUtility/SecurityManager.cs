@@ -17,12 +17,12 @@ namespace SecurityUtility
             encryptedMasterPassword = SymmetricalEncryptData(masterPasswordSA, masterPassword);
         }
 
-        public byte[] EncryptData(string inputData)
+        public string EncryptData(string inputData)
         {
             SymmetricAlgorithm currentAES;
             currentAES = Derive_Key_From_Password_rfc2898(GetMasterPassword());
 
-            return SymmetricalEncryptData(currentAES, inputData);
+            return Convert.ToBase64String(SymmetricalEncryptData(currentAES, inputData));
         }
 
         public string DecryptData(byte []encrypteInputData)

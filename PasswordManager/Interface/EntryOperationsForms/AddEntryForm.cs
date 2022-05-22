@@ -35,7 +35,12 @@ namespace Interface
 
         private void buttonAddEntry_Click(object sender, EventArgs e)
         {
-            // TODO
+            string platform = textBoxPlatform.Text.Trim();
+            string username = textBoxUsername.Text.Trim();
+            string password = textBoxPassword.Text.Trim();
+            string extrInfo = richTextBoxExtraInfo.Text.Trim();
+
+
         }
     }
 }

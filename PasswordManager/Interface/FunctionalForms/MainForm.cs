@@ -7,17 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SecurityUtility;
 
 namespace Interface
 {
     public partial class MainForm : BaseForm
     {
         private LoginForm loginForm;
-        public MainForm(LoginForm _loginForm) : base()
+        private string currentUsername;
+        private SecurityManager securityManager;
+
+        public MainForm(LoginForm _loginForm, SecurityManager _securityManager, string username) : base()
         {
             InitializeComponent();
 
-            loginForm = _loginForm;
+            loginForm       = _loginForm;
+            securityManager = _securityManager;
+            currentUsername = username;
+            groupBoxCurrentUser.Text = username;
+
             this.FormClosing += new FormClosingEventHandler(MainForm_Closing);
         }
 

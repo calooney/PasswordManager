@@ -81,7 +81,22 @@ namespace Interface
             }
 
             SetFeedbackLabel(Color.Green, "Account created!");
-            // TODO: adaugare in baza de date
+
+
+            SecurityUtility.SecurityManager securityManager = new SecurityUtility.SecurityManager(password1);
+            name        = securityManager.EncryptData(name);
+            username    = securityManager.EncryptData(username);
+            email       = securityManager.EncryptData(email);
+            telephone   = securityManager.EncryptData(telephone);
+
+            string password = securityManager.ComputeKeyHash();
+
+            Utility.User toAddUser = new Utility.User(name, username, password, email, telephone);
+
+            DataBaseManager.DatabaseManager databaseManager = DataBaseManager.DatabaseManager.Instance;
+            databaseManager.AddUser(toAddUser);
+
+            MessageBox.Show("User Created");
         }
     }
 }
