@@ -1,4 +1,15 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿/**************************************************************************
+ *                                                                        *
+ *  File:        DatabaseManagerTests.cs                                  *
+ *  Copyright:   (c) 2022, Adrian-Marian Grabovschi                       *
+ *  E-mail:      adrian-marian.grabovschi@student.tuiasi.ro               *
+ *  Description: Developed Unit Test scenarios to test the corner cases   *
+ *               of persistence module.                                   *
+ *                                                                        *
+ **************************************************************************/
+
+
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DataBaseManager;
 using System;
 using System.Collections.Generic;
@@ -16,6 +27,9 @@ namespace DataBaseManager.Tests
     public class DatabaseManagerTests
     {
         DatabaseManager database = null;
+        
+        // metoda care este apelata inaintea fiecarui test
+        // cu scopul de a atribui variabilei "database" valoarea null
         [TestInitialize()]
         public void Init()
         {
@@ -397,8 +411,6 @@ namespace DataBaseManager.Tests
             database = DatabaseManager.Instance;
             database.DeleteUser(null);
         }
-
-
 
     }
 }

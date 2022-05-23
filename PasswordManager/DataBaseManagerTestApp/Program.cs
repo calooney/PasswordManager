@@ -1,4 +1,15 @@
-﻿using System;
+﻿/**************************************************************************
+ *                                                                        *
+ *  File:        Program.cs                                               *
+ *  Copyright:   (c) 2022, Adrian-Marian Grabovschi                       *
+ *  E-mail:      adrian-marian.grabovschi@student.tuiasi.ro               *
+ *  Description: This program was created for testing outside project     *
+ *               all persistence methods functionally.                    *
+ *                                                                        *
+ **************************************************************************/
+
+
+using System;
 using DataBaseManager;
 using Utility;
 namespace DataBaseManagerTestApp
