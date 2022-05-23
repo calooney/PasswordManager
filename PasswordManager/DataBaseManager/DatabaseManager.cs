@@ -10,7 +10,7 @@ namespace DataBaseManager
 {
     public class DatabaseManager
     {
-        static SqlConnection conn = null;
+        SqlConnection conn = null;
         private static DatabaseManager _instance = null;
 
         private static readonly object _lock = new object ();
@@ -31,6 +31,8 @@ namespace DataBaseManager
                 return _instance;
             }
         }
+
+        public SqlConnection Conn { get => conn;}
 
         private DatabaseManager()
         {
@@ -149,10 +151,10 @@ namespace DataBaseManager
             return accountList;
         }
 
-        public void UpdateAccountInfo(UserAccountInfo info)
+        public bool UpdateAccountInfo(UserAccountInfo info)
         {
             SqlCommand sqlCommand;
-
+            bool result = true;
             SqlDataAdapter adapter = new SqlDataAdapter();
             SqlDataReader dataReader;
 
@@ -167,8 +169,11 @@ namespace DataBaseManager
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+                result = false;
             }
             sqlCommand.Dispose();
+
+            return result;
         }
 
 
