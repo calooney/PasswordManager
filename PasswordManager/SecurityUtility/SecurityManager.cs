@@ -3,7 +3,7 @@
  *  File:        SecurityManager.cs                                        *
  *  Copyright:   (c) 2022, Luca Silviu-Catalin                             *
  *  E-mail:      silviu-catalin.luca@student.tuiasi.ro                     *
- *  Description: In this file you will find the implementation for all     __masterPasswordSA*
+ *  Description: In this file you will find the implementation for all     *
  *               security utility related to PasswordManager Application.  *
  *                                                                         *
  ***************************************************************************/
@@ -39,7 +39,7 @@ namespace SecurityUtility
                 return "";
 
             SymmetricAlgorithm currentAES;
-            currentAES = Derive_Key_From_Password_rfc2898(GetMasterPassword());
+            currentAES = Derive_Key_From_Password_RFC2898(GetMasterPassword());
 
             return Convert.ToBase64String(SymmetricalEncryptData(currentAES, inputData));
         }
@@ -56,7 +56,7 @@ namespace SecurityUtility
                 return "";
 
             SymmetricAlgorithm currentAES;
-            currentAES = Derive_Key_From_Password_rfc2898(GetMasterPassword());
+            currentAES = Derive_Key_From_Password_RFC2898(GetMasterPassword());
             
             return SymmetricalDecryptData(currentAES, Convert.FromBase64String(encrypteInputData));
         }
@@ -132,7 +132,7 @@ namespace SecurityUtility
         /// </summary>
         /// <param name="password"></param>
         /// <returns></returns>
-        private SymmetricAlgorithm Derive_Key_From_Password_rfc2898(string password)
+        private SymmetricAlgorithm Derive_Key_From_Password_RFC2898(string password)
         {
             const int DERIVE_KEY_LEN = 256;
             const int DERIVE_ITERATIONS = 9872;
@@ -158,7 +158,7 @@ namespace SecurityUtility
         /// <returns></returns>
         public string ComputeKeyHash()
         {
-            SymmetricAlgorithm currentAES = Derive_Key_From_Password_rfc2898(GetMasterPassword());
+            SymmetricAlgorithm currentAES = Derive_Key_From_Password_RFC2898(GetMasterPassword());
             return Encode_to_SHA256_string(ConvertByteToString(currentAES.Key));
         }
 
