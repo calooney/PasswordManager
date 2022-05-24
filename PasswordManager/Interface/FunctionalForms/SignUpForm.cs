@@ -67,13 +67,13 @@ namespace Interface
                 return;
             }
 
-            if (telephone.Length < 10 || telephone == "" || !Utility.Checks.IsDigitsOnly(telephone))
+            if (telephone.Length == 10 || telephone == "" || !Utility.Checks.IsDigitsOnly(telephone))
             {
                 SetFeedbackLabel(Color.Red, "Insert a valid telephone number!");
                 return;
             }
 
-            if (password1 == "")
+            if (password1 == "" || password1.Length < 5)
             {
                 SetFeedbackLabel(Color.Red, "Insert a valid password!");
                 return;
@@ -98,10 +98,21 @@ namespace Interface
 
             Utility.User toAddUser = new Utility.User(name, username, password, email, telephone);
 
-            DataBaseManager.DatabaseManager databaseManager = DataBaseManager.DatabaseManager.Instance;
-            databaseManager.AddUser(toAddUser);
+            bool status = false;
+            try
+            {
+                DataBaseManager.DatabaseManager databaseManager = DataBaseManager.DatabaseManager.Instance;
+                status = databaseManager.AddUser(toAddUser);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("DATABASE ERROR:\n" + ex.Message);
+            }
 
-            MessageBox.Show("User Created");
+            if (status)
+                MessageBox.Show("User Created");
+            else
+                MessageBox.Show("ERROR: User cannot be created!\nDatabse Error!");
         }
     }
 }

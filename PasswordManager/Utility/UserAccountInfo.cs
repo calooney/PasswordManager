@@ -13,7 +13,10 @@ namespace Utility
 {
     public class UserAccountInfo
     {
-        public string platform, username, password, extraInfo;
+        public string platform;
+        public string username;
+        public string password;
+        public string extraInfo;
         public int id;
 
         public UserAccountInfo(string platform, string username, string password, string extraInfo = null, int id = 0)

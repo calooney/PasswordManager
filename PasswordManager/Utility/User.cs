@@ -13,7 +13,11 @@ namespace Utility
 {
     public class User
     {
-        public string name, username, password, email, telephone;
+        public string name;
+        public string username;
+        public string password;
+        public string email;
+        public string telephone;
 
         public User(string name, string username, string password, string email, string telephone)
         {

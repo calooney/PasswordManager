@@ -53,13 +53,25 @@ namespace Interface
             string extrInfo = richTextBoxExtraInfo.Text.Trim();
 
             platform = _securityManager.EncryptData(platform);  
-
             username = _securityManager.EncryptData(username);
             password = _securityManager.EncryptData(password);
             extrInfo = _securityManager.EncryptData(extrInfo);
 
-            UserAccountInfo accountInfo = new UserAccountInfo(platform, username, password, extrInfo);
-            accountInfo.id = DatabaseManager.Instance.AddPlatformInfo(_currentUser, accountInfo);
+            if (platform == "" || password == "")
+            {
+                MessageBox.Show("Invalid input data!\nPlatform & Password are mandatory!");
+                return;
+            }
+
+            try
+            {
+                UserAccountInfo accountInfo = new UserAccountInfo(platform, username, password, extrInfo);
+                accountInfo.id = DatabaseManager.Instance.AddPlatformInfo(_currentUser, accountInfo);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("DATABASE ERROR: \n" + ex.Message);
+            }
 
             MessageBox.Show("Account added!");
             this.Close();

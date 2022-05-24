@@ -57,9 +57,22 @@ namespace Interface
             _currentAccountInfo.password = _securityManager.EncryptData(textBoxPassword.Text.Trim());
             _currentAccountInfo.extraInfo = _securityManager.EncryptData(richTextBoxExtraInfo.Text.Trim());
 
-            DatabaseManager.Instance.UpdateAccountInfo(_currentAccountInfo);
+            bool status = false;
+            try
+            {
+                DataBaseManager.DatabaseManager databaseManager = DataBaseManager.DatabaseManager.Instance;
+                status = DatabaseManager.Instance.UpdateAccountInfo(_currentAccountInfo); ;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("DATABASE ERROR:\n" + ex.Message);
+            }
+            
+            if (status)
+                MessageBox.Show("Update successfully");
+            else
+                MessageBox.Show("ERROR: User cannot be created!\nDatabse Error!");
 
-            MessageBox.Show("Update successfully");
             this.Close();
         }
     }

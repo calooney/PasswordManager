@@ -69,7 +69,15 @@ namespace Interface
         }
         private void RefreshEntries()
         {
-            _listAccount = DatabaseManager.Instance.GetUserAccounts(_currentUser);
+            try
+            {
+                _listAccount = DatabaseManager.Instance.GetUserAccounts(_currentUser);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("DATABASE ERROR:\n" + ex.Message);
+            }
+            
             listBoxEntries.Items.Clear();
 
             for (int i = 0; i < _listAccount.Count; i++)
@@ -96,16 +104,30 @@ namespace Interface
 
         private void buttonDeleteEntry_Click(object sender, EventArgs e)
         {
-            if (_currentAccountIndex != -1)
-                if (DatabaseManager.Instance.DeleteAccount(_listAccount[_currentAccountIndex]))
-                {
-                    RefreshEntries();
-                    MessageBox.Show("Entry Deletion Success!");
-                }
+            try
+            {            
+                if (_currentAccountIndex != -1)
+                    if (DatabaseManager.Instance.DeleteAccount(_listAccount[_currentAccountIndex]))
+                    {
+                        RefreshEntries();
+                        MessageBox.Show("Entry Deletion Success!");
+
+                        textBoxPlatform.Text = "";
+                        textBoxUsername.Text = "";
+                        textBoxPassword.Text = "";
+                        richTextBoxExtraInfo.Text = "";
+
+                        _currentAccountIndex = -1;
+                    }
+                    else
+                        MessageBox.Show("Entry Deletion Failed!");
                 else
-                    MessageBox.Show("Entry Deletion Failed!");
-            else
-                MessageBox.Show("Please select an entry!");
+                    MessageBox.Show("Please select an entry!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("DATABASE ERROR:\n" + ex.Message);
+            }
         }
     }
 }

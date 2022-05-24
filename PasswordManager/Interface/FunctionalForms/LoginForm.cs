@@ -29,8 +29,16 @@ namespace Interface
             SecurityUtility.SecurityManager securityManager = new SecurityUtility.SecurityManager(password);
             string encrypteduser = securityManager.EncryptData(username);
 
-            DataBaseManager.DatabaseManager databaseManager = DataBaseManager.DatabaseManager.Instance;
-            Utility.User currentUser = databaseManager.GetUser(encrypteduser);
+            Utility.User currentUser = null;
+            try
+            {
+                DataBaseManager.DatabaseManager databaseManager = DataBaseManager.DatabaseManager.Instance;
+                currentUser = databaseManager.GetUser(encrypteduser);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("DATABASE ERROR:\n" + ex.Message);
+            }
 
             if (currentUser != null)
                 if (securityManager.ComputeKeyHash() == currentUser.password)
@@ -70,11 +78,17 @@ namespace Interface
             MessageBox.Show(telephone);
             MessageBox.Show(password);
 
-
             Utility.User toAddUser = new Utility.User(name, username, password, email, telephone);
 
-            DataBaseManager.DatabaseManager databaseManager = DataBaseManager.DatabaseManager.Instance;
-            databaseManager.AddUser(toAddUser);
+            try
+            {
+                DataBaseManager.DatabaseManager databaseManager = DataBaseManager.DatabaseManager.Instance;
+                databaseManager.AddUser(toAddUser);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("DATABASE ERROR:\n" + ex.Message);
+            }
         }
 
         private void buttonHelp_Click(object sender, EventArgs e)

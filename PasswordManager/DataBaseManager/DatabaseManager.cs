@@ -71,8 +71,9 @@ namespace DataBaseManager
             string sql = $"insert into Users values('{user.username}', '{user.password}', '{user.name}','{user.email}', '{user.telephone}')";
 
             sqlCommand = new SqlCommand(sql, _conn);
-            try { 
-            sqlCommand.ExecuteNonQuery();
+            try
+            { 
+                sqlCommand.ExecuteNonQuery();
             }
             catch(Exception e)
             {
