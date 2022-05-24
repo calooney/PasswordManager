@@ -1,8 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/****************************************************************************
+ *                                                                          *
+ *  File:        UserAccountInfo.cs                                                    *
+ *  Copyright:   (c) 2022, Draganescu Bianca-Andreea                        *
+ *  E-mail:      bianca-andreea.draganescu@student.tuiasi.ro                *
+ *  Description: In this file you will find the implementation for          *
+ *               a UserAccountInfo class that will be used in               *
+ *               main application foar data data transfer between entitie.  *
+ *                                                                          *
+ ****************************************************************************/
 
 namespace Utility
 {

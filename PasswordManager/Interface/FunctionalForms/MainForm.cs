@@ -1,11 +1,15 @@
-﻿using System;
+﻿/****************************************************************************
+ *                                                                          *
+ *  File:        MainForm.cs                                              *
+ *  Copyright:   (c) 2022, Tarziu Matei-Stefan                              *
+ *  E-mail:      matei-stefan.tarziu@student.tuiasi.ro                      *
+ *  Description: In this file you will find the implementation for          *
+ *               main user interaction window formular                      *
+ *                                                                          *
+ ****************************************************************************/
+
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using SecurityUtility;
 using Utility;
@@ -88,6 +92,20 @@ namespace Interface
                 textBoxPassword.Text = securityManager.DecryptData(_listAccount[index].password);
                 richTextBoxExtraInfo.Text = securityManager.DecryptData(_listAccount[index].extraInfo);
             }
+        }
+
+        private void buttonDeleteEntry_Click(object sender, EventArgs e)
+        {
+            if (_currentAccountIndex != -1)
+                if (DatabaseManager.Instance.DeleteAccount(_listAccount[_currentAccountIndex]))
+                {
+                    RefreshEntries();
+                    MessageBox.Show("Entry Deletion Success!");
+                }
+                else
+                    MessageBox.Show("Entry Deletion Failed!");
+            else
+                MessageBox.Show("Please select an entry!");
         }
     }
 }

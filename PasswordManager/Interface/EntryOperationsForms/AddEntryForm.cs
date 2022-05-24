@@ -1,11 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/****************************************************************************
+ *                                                                          *
+ *  File:        AddEntryForm.cs                                            *
+ *  Copyright:   (c) 2022, Tarziu Matei-Stefan + Draganescu Bianca-Andreea  *
+ *  E-mail:      matei-stefan.tarziu@student.tuiasi.ro                      *
+ *  Description: In this file you will find the implementation for          *
+ *               data persistance formular & logic.                         *
+ *                                                                          *
+ ****************************************************************************/
+
+using System;
 using System.Windows.Forms;
 using SecurityUtility;
 using DataBaseManager;

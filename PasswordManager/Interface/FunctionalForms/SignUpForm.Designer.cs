@@ -61,14 +61,14 @@ namespace Interface
             this.textBoxEmail.Location = new System.Drawing.Point(399, 374);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(239, 23);
-            this.textBoxEmail.TabIndex = 1;
+            this.textBoxEmail.TabIndex = 2;
             // 
             // textBoxPassword1
             // 
             this.textBoxPassword1.Location = new System.Drawing.Point(399, 432);
             this.textBoxPassword1.Name = "textBoxPassword1";
             this.textBoxPassword1.Size = new System.Drawing.Size(239, 23);
-            this.textBoxPassword1.TabIndex = 3;
+            this.textBoxPassword1.TabIndex = 4;
             this.textBoxPassword1.UseSystemPasswordChar = true;
             // 
             // textBoxTelephone
@@ -76,14 +76,14 @@ namespace Interface
             this.textBoxTelephone.Location = new System.Drawing.Point(399, 403);
             this.textBoxTelephone.Name = "textBoxTelephone";
             this.textBoxTelephone.Size = new System.Drawing.Size(239, 23);
-            this.textBoxTelephone.TabIndex = 2;
+            this.textBoxTelephone.TabIndex = 3;
             // 
             // textBoxPassword2
             // 
             this.textBoxPassword2.Location = new System.Drawing.Point(399, 461);
             this.textBoxPassword2.Name = "textBoxPassword2";
             this.textBoxPassword2.Size = new System.Drawing.Size(239, 23);
-            this.textBoxPassword2.TabIndex = 4;
+            this.textBoxPassword2.TabIndex = 5;
             this.textBoxPassword2.UseSystemPasswordChar = true;
             // 
             // labelName
@@ -141,7 +141,7 @@ namespace Interface
             this.buttonSignUp.Location = new System.Drawing.Point(603, 511);
             this.buttonSignUp.Name = "buttonSignUp";
             this.buttonSignUp.Size = new System.Drawing.Size(75, 23);
-            this.buttonSignUp.TabIndex = 10;
+            this.buttonSignUp.TabIndex = 7;
             this.buttonSignUp.Text = "Sign Up";
             this.buttonSignUp.UseVisualStyleBackColor = true;
             this.buttonSignUp.Click += new System.EventHandler(this.buttonSignUp_Click);
@@ -151,7 +151,7 @@ namespace Interface
             this.buttonClearFields.Location = new System.Drawing.Point(248, 511);
             this.buttonClearFields.Name = "buttonClearFields";
             this.buttonClearFields.Size = new System.Drawing.Size(75, 23);
-            this.buttonClearFields.TabIndex = 11;
+            this.buttonClearFields.TabIndex = 6;
             this.buttonClearFields.Text = "Clear Fields";
             this.buttonClearFields.UseVisualStyleBackColor = true;
             this.buttonClearFields.Click += new System.EventHandler(this.buttonClearFields_Click);
@@ -181,7 +181,7 @@ namespace Interface
             this.textBoxUsername.Location = new System.Drawing.Point(399, 345);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(239, 23);
-            this.textBoxUsername.TabIndex = 13;
+            this.textBoxUsername.TabIndex = 1;
             // 
             // labelFeedback
             // 

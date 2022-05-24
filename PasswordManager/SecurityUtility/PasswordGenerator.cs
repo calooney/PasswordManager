@@ -1,25 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿/***************************************************************************
+ *                                                                         *
+ *  File:        PasswordGenerator.cs                                        *
+ *  Copyright:   (c) 2022, Luca Silviu-Catalin                             *
+ *  E-mail:      silviu-catalin.luca@student.tuiasi.ro                     *
+ *  Description: In this file you will find the implementation for         *
+ *               a random password generator.                              *
+ *                                                                         *
+ ***************************************************************************/
+
+using System;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace SecurityUtility
 {
     public static class PasswordGenerator
     {
+        /// <summary>
+        /// Generator de parola Random de o lungime data ca parametru.
+        /// </summary>
+        /// <param name="passwordLength"></param>
+        /// <returns></returns>
         public static string GeneratePassword(int passwordLength)
         {
             string digits = "0123456789";
             string specialChars = "!@#$%^&*()-_=+<,>.";
             string upperLetters = "QWERTYUIOPASDFGHJKLZXCVBNM";
             string lowerLetters = "qwertyuiopasdfghjklzxcvbnm";
-
-            /*
-            string[] alphabet = { upperLetters, lowerLetters, digits, specialChars };
-            int partition = GENERATED_PASSWORD_LENGTH / 4;
-            int[] counter = { partition, partition, partition, partition };
-            */
 
             string validChars = upperLetters + lowerLetters + digits + specialChars;
 

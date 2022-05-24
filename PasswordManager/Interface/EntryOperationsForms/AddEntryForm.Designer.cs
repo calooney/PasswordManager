@@ -55,7 +55,7 @@ namespace Interface
             this.richTextBoxExtraInfo.Location = new System.Drawing.Point(12, 217);
             this.richTextBoxExtraInfo.Name = "richTextBoxExtraInfo";
             this.richTextBoxExtraInfo.Size = new System.Drawing.Size(560, 150);
-            this.richTextBoxExtraInfo.TabIndex = 1;
+            this.richTextBoxExtraInfo.TabIndex = 5;
             this.richTextBoxExtraInfo.Text = "";
             // 
             // labelPlatform
@@ -93,14 +93,14 @@ namespace Interface
             this.textBoxUsername.Location = new System.Drawing.Point(172, 76);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(250, 23);
-            this.textBoxUsername.TabIndex = 8;
+            this.textBoxUsername.TabIndex = 1;
             // 
             // buttonAddEntry
             // 
             this.buttonAddEntry.Location = new System.Drawing.Point(172, 398);
             this.buttonAddEntry.Name = "buttonAddEntry";
             this.buttonAddEntry.Size = new System.Drawing.Size(75, 23);
-            this.buttonAddEntry.TabIndex = 10;
+            this.buttonAddEntry.TabIndex = 6;
             this.buttonAddEntry.Text = "Add";
             this.buttonAddEntry.UseVisualStyleBackColor = true;
             this.buttonAddEntry.Click += new System.EventHandler(this.buttonAddEntry_Click);
@@ -110,7 +110,7 @@ namespace Interface
             this.buttonCancel.Location = new System.Drawing.Point(347, 398);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
-            this.buttonCancel.TabIndex = 11;
+            this.buttonCancel.TabIndex = 7;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
@@ -130,7 +130,7 @@ namespace Interface
             this.textBoxPassword.Location = new System.Drawing.Point(172, 105);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(250, 23);
-            this.textBoxPassword.TabIndex = 12;
+            this.textBoxPassword.TabIndex = 2;
             this.textBoxPassword.UseSystemPasswordChar = true;
             // 
             // buttonGeneratePassword
@@ -138,7 +138,7 @@ namespace Interface
             this.buttonGeneratePassword.Location = new System.Drawing.Point(220, 143);
             this.buttonGeneratePassword.Name = "buttonGeneratePassword";
             this.buttonGeneratePassword.Size = new System.Drawing.Size(128, 23);
-            this.buttonGeneratePassword.TabIndex = 14;
+            this.buttonGeneratePassword.TabIndex = 4;
             this.buttonGeneratePassword.Text = "Generate Password";
             this.buttonGeneratePassword.UseVisualStyleBackColor = true;
             this.buttonGeneratePassword.Click += new System.EventHandler(this.buttonGeneratePassword_Click);
@@ -149,7 +149,7 @@ namespace Interface
             this.checkBoxShowPassword.Location = new System.Drawing.Point(428, 109);
             this.checkBoxShowPassword.Name = "checkBoxShowPassword";
             this.checkBoxShowPassword.Size = new System.Drawing.Size(108, 19);
-            this.checkBoxShowPassword.TabIndex = 15;
+            this.checkBoxShowPassword.TabIndex = 3;
             this.checkBoxShowPassword.Text = "Show Password";
             this.checkBoxShowPassword.UseVisualStyleBackColor = true;
             this.checkBoxShowPassword.CheckedChanged += new System.EventHandler(this.checkBoxShowPassword_CheckedChanged);

@@ -37,7 +37,7 @@ namespace Interface
             this.buttonLogin = new System.Windows.Forms.Button();
             this.buttonSignUp = new System.Windows.Forms.Button();
             this.pictureBoxMainLogo = new System.Windows.Forms.PictureBox();
-            this.buttonTest = new System.Windows.Forms.Button();
+            this.buttonHelp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMainLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,7 +47,7 @@ namespace Interface
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(200, 23);
-            this.textBoxPassword.TabIndex = 3;
+            this.textBoxPassword.TabIndex = 2;
             this.textBoxPassword.UseSystemPasswordChar = true;
             // 
             // textBoxUsername
@@ -55,7 +55,7 @@ namespace Interface
             this.textBoxUsername.Location = new System.Drawing.Point(399, 328);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(200, 23);
-            this.textBoxUsername.TabIndex = 4;
+            this.textBoxUsername.TabIndex = 1;
             // 
             // labelUsername
             // 
@@ -82,7 +82,7 @@ namespace Interface
             this.buttonLogin.Location = new System.Drawing.Point(318, 464);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(75, 23);
-            this.buttonLogin.TabIndex = 7;
+            this.buttonLogin.TabIndex = 3;
             this.buttonLogin.Text = "Login";
             this.buttonLogin.UseVisualStyleBackColor = true;
             this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
@@ -92,7 +92,7 @@ namespace Interface
             this.buttonSignUp.Location = new System.Drawing.Point(524, 464);
             this.buttonSignUp.Name = "buttonSignUp";
             this.buttonSignUp.Size = new System.Drawing.Size(75, 23);
-            this.buttonSignUp.TabIndex = 8;
+            this.buttonSignUp.TabIndex = 4;
             this.buttonSignUp.Text = "Sign up";
             this.buttonSignUp.UseVisualStyleBackColor = true;
             this.buttonSignUp.Click += new System.EventHandler(this.buttonSignUp_Click);
@@ -107,22 +107,22 @@ namespace Interface
             this.pictureBoxMainLogo.TabIndex = 9;
             this.pictureBoxMainLogo.TabStop = false;
             // 
-            // buttonTest
+            // buttonHelp
             // 
-            this.buttonTest.Location = new System.Drawing.Point(122, 372);
-            this.buttonTest.Name = "buttonTest";
-            this.buttonTest.Size = new System.Drawing.Size(75, 23);
-            this.buttonTest.TabIndex = 10;
-            this.buttonTest.Text = "test";
-            this.buttonTest.UseVisualStyleBackColor = true;
-            this.buttonTest.Click += new System.EventHandler(this.buttonTest_Click);
+            this.buttonHelp.Location = new System.Drawing.Point(12, 12);
+            this.buttonHelp.Name = "buttonHelp";
+            this.buttonHelp.Size = new System.Drawing.Size(75, 23);
+            this.buttonHelp.TabIndex = 5;
+            this.buttonHelp.Text = "Help";
+            this.buttonHelp.UseVisualStyleBackColor = true;
+            this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
-            this.Controls.Add(this.buttonTest);
+            this.Controls.Add(this.buttonHelp);
             this.Controls.Add(this.pictureBoxMainLogo);
             this.Controls.Add(this.buttonSignUp);
             this.Controls.Add(this.buttonLogin);
@@ -147,7 +147,7 @@ namespace Interface
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.Button buttonSignUp;
         private System.Windows.Forms.PictureBox pictureBoxMainLogo;
-        private System.Windows.Forms.Button buttonTest;
+        private System.Windows.Forms.Button buttonHelp;
     }
 }
 

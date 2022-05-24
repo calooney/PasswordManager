@@ -1,11 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿/****************************************************************************
+ *                                                                          *
+ *  File:        SignUpForm.cs                                              *
+ *  Copyright:   (c) 2022, Tarziu Matei-Stefan                              *
+ *  E-mail:      matei-stefan.tarziu@student.tuiasi.ro                      *
+ *  Description: In this file you will find the implementation for          *
+ *               main user interaction window formular                      *
+ *                                                                          *
+ ****************************************************************************/
+
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Interface
@@ -21,6 +25,7 @@ namespace Interface
         {
             textBoxName.Text = "";
             textBoxEmail.Text = "";
+            textBoxUsername.Text = "";
             textBoxTelephone.Text = "";
             textBoxPassword1.Text = "";
             textBoxPassword2.Text = "";

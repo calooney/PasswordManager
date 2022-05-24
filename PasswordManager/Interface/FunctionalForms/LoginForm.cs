@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
+﻿/****************************************************************************
+ *                                                                          *
+ *  File:        LoginForm.cs                                               *
+ *  Copyright:   (c) 2022, Tarziu Matei-Stefan                              *
+ *  E-mail:      matei-stefan.tarziu@student.tuiasi.ro                      *
+ *  Description: In this file you will find the implementation for          *
+ *               Login Formular.                                            *
+ *                                                                          *
+ ****************************************************************************/
+
+using System;
 using System.Windows.Forms;
 
 namespace Interface
@@ -73,6 +75,17 @@ namespace Interface
 
             DataBaseManager.DatabaseManager databaseManager = DataBaseManager.DatabaseManager.Instance;
             databaseManager.AddUser(toAddUser);
+        }
+
+        private void buttonHelp_Click(object sender, EventArgs e)
+        {
+            string startupPath = Environment.CurrentDirectory;
+            string projectName = "PasswordManager";
+            string rootPath = startupPath.Split(projectName)[0] + '/' + projectName + '/';
+            string helpPath = rootPath + "PasswordManager.chm";
+
+            // MessageBox.Show(helpPath);
+            System.Windows.Forms.Help.ShowHelp(this, helpPath);
         }
     }
 }

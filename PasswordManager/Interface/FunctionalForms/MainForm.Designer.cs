@@ -43,6 +43,7 @@ namespace Interface
             this.listBoxEntries = new System.Windows.Forms.ListBox();
             this.buttonAddEntry = new System.Windows.Forms.Button();
             this.buttonEditEntry = new System.Windows.Forms.Button();
+            this.buttonDeleteEntry = new System.Windows.Forms.Button();
             this.groupBoxCurrentUser.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +59,7 @@ namespace Interface
             // 
             // groupBoxCurrentUser
             // 
+            this.groupBoxCurrentUser.Controls.Add(this.buttonDeleteEntry);
             this.groupBoxCurrentUser.Controls.Add(this.buttonRefreshEntries);
             this.groupBoxCurrentUser.Controls.Add(this.textBoxPlatform);
             this.groupBoxCurrentUser.Controls.Add(this.labelPlatform);
@@ -80,7 +82,7 @@ namespace Interface
             // 
             // buttonRefreshEntries
             // 
-            this.buttonRefreshEntries.Location = new System.Drawing.Point(806, 392);
+            this.buttonRefreshEntries.Location = new System.Drawing.Point(806, 425);
             this.buttonRefreshEntries.Name = "buttonRefreshEntries";
             this.buttonRefreshEntries.Size = new System.Drawing.Size(111, 26);
             this.buttonRefreshEntries.TabIndex = 14;
@@ -199,6 +201,16 @@ namespace Interface
             this.buttonEditEntry.UseVisualStyleBackColor = true;
             this.buttonEditEntry.Click += new System.EventHandler(this.buttonEditEntry_Click);
             // 
+            // buttonDeleteEntry
+            // 
+            this.buttonDeleteEntry.Location = new System.Drawing.Point(806, 393);
+            this.buttonDeleteEntry.Name = "buttonDeleteEntry";
+            this.buttonDeleteEntry.Size = new System.Drawing.Size(111, 26);
+            this.buttonDeleteEntry.TabIndex = 15;
+            this.buttonDeleteEntry.Text = "Delete Entry";
+            this.buttonDeleteEntry.UseVisualStyleBackColor = true;
+            this.buttonDeleteEntry.Click += new System.EventHandler(this.buttonDeleteEntry_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -228,5 +240,6 @@ namespace Interface
         private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.Label labelUsername;
         private System.Windows.Forms.Button buttonRefreshEntries;
+        private System.Windows.Forms.Button buttonDeleteEntry;
     }
 }

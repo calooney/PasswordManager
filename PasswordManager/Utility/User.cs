@@ -1,8 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/****************************************************************************
+ *                                                                          *
+ *  File:        User.cs                                                    *
+ *  Copyright:   (c) 2022, Draganescu Bianca-Andreea                        *
+ *  E-mail:      bianca-andreea.draganescu@student.tuiasi.ro                *
+ *  Description: In this file you will find the implementation for          *
+ *               a User class that will be used in main application         *
+ *               for data data transfer between entities.                   *
+ *                                                                          *
+ ****************************************************************************/
 
 namespace Utility
 {
