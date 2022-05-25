@@ -43,27 +43,29 @@ namespace Interface
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(399, 371);
+            this.textBoxPassword.Location = new System.Drawing.Point(456, 495);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '*';
-            this.textBoxPassword.Size = new System.Drawing.Size(200, 23);
+            this.textBoxPassword.Size = new System.Drawing.Size(228, 27);
             this.textBoxPassword.TabIndex = 2;
             this.textBoxPassword.UseSystemPasswordChar = true;
             // 
             // textBoxUsername
             // 
-            this.textBoxUsername.Location = new System.Drawing.Point(399, 328);
+            this.textBoxUsername.Location = new System.Drawing.Point(456, 437);
+            this.textBoxUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(200, 23);
+            this.textBoxUsername.Size = new System.Drawing.Size(228, 27);
             this.textBoxUsername.TabIndex = 1;
             // 
             // labelUsername
             // 
             this.labelUsername.AutoSize = true;
             this.labelUsername.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelUsername.Location = new System.Drawing.Point(309, 328);
+            this.labelUsername.Location = new System.Drawing.Point(353, 437);
             this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(84, 21);
+            this.labelUsername.Size = new System.Drawing.Size(103, 28);
             this.labelUsername.TabIndex = 5;
             this.labelUsername.Text = "Username:";
             // 
@@ -71,17 +73,18 @@ namespace Interface
             // 
             this.labelPassword.AutoSize = true;
             this.labelPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelPassword.Location = new System.Drawing.Point(314, 371);
+            this.labelPassword.Location = new System.Drawing.Point(359, 495);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(79, 21);
+            this.labelPassword.Size = new System.Drawing.Size(97, 28);
             this.labelPassword.TabIndex = 6;
             this.labelPassword.Text = "Password:";
             // 
             // buttonLogin
             // 
-            this.buttonLogin.Location = new System.Drawing.Point(318, 464);
+            this.buttonLogin.Location = new System.Drawing.Point(363, 619);
+            this.buttonLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(75, 23);
+            this.buttonLogin.Size = new System.Drawing.Size(86, 31);
             this.buttonLogin.TabIndex = 3;
             this.buttonLogin.Text = "Login";
             this.buttonLogin.UseVisualStyleBackColor = true;
@@ -89,9 +92,10 @@ namespace Interface
             // 
             // buttonSignUp
             // 
-            this.buttonSignUp.Location = new System.Drawing.Point(524, 464);
+            this.buttonSignUp.Location = new System.Drawing.Point(599, 619);
+            this.buttonSignUp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonSignUp.Name = "buttonSignUp";
-            this.buttonSignUp.Size = new System.Drawing.Size(75, 23);
+            this.buttonSignUp.Size = new System.Drawing.Size(86, 31);
             this.buttonSignUp.TabIndex = 4;
             this.buttonSignUp.Text = "Sign up";
             this.buttonSignUp.UseVisualStyleBackColor = true;
@@ -100,18 +104,20 @@ namespace Interface
             // pictureBoxMainLogo
             // 
             this.pictureBoxMainLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxMainLogo.Image")));
-            this.pictureBoxMainLogo.Location = new System.Drawing.Point(257, 12);
+            this.pictureBoxMainLogo.Location = new System.Drawing.Point(258, 16);
+            this.pictureBoxMainLogo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBoxMainLogo.Name = "pictureBoxMainLogo";
-            this.pictureBoxMainLogo.Size = new System.Drawing.Size(430, 271);
+            this.pictureBoxMainLogo.Size = new System.Drawing.Size(572, 361);
             this.pictureBoxMainLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxMainLogo.TabIndex = 9;
             this.pictureBoxMainLogo.TabStop = false;
             // 
             // buttonHelp
             // 
-            this.buttonHelp.Location = new System.Drawing.Point(12, 12);
+            this.buttonHelp.Location = new System.Drawing.Point(14, 16);
+            this.buttonHelp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonHelp.Name = "buttonHelp";
-            this.buttonHelp.Size = new System.Drawing.Size(75, 23);
+            this.buttonHelp.Size = new System.Drawing.Size(86, 31);
             this.buttonHelp.TabIndex = 5;
             this.buttonHelp.Text = "Help";
             this.buttonHelp.UseVisualStyleBackColor = true;
@@ -119,9 +125,9 @@ namespace Interface
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 561);
+            this.ClientSize = new System.Drawing.Size(1125, 748);
             this.Controls.Add(this.buttonHelp);
             this.Controls.Add(this.pictureBoxMainLogo);
             this.Controls.Add(this.buttonSignUp);
@@ -130,6 +136,7 @@ namespace Interface
             this.Controls.Add(this.labelUsername);
             this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.textBoxPassword);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "LoginForm";
             this.Text = "Password Manager";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMainLogo)).EndInit();
