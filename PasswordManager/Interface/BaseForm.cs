@@ -4,8 +4,9 @@
  *  Copyright:   (c) 2022, Tarziu Matei-Stefan                              *
  *  E-mail:      matei-stefan.tarziu@student.tuiasi.ro                      *
  *  Description: In this file you will find the implementation for          *
- *               a BaseForm class that will be used to inherit              *
- *               Form proprieties to all uset Form in application.          *
+ *               a BaseForm class which will have the adequate              *
+ *               properties for all the Forms used in the application       *
+ *               to inherit.                                                *
  *                                                                          *
  ****************************************************************************/
 

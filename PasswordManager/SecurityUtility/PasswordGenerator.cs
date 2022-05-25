@@ -1,6 +1,6 @@
 ﻿/***************************************************************************
  *                                                                         *
- *  File:        PasswordGenerator.cs                                        *
+ *  File:        PasswordGenerator.cs                                      *
  *  Copyright:   (c) 2022, Luca Silviu-Catalin                             *
  *  E-mail:      silviu-catalin.luca@student.tuiasi.ro                     *
  *  Description: In this file you will find the implementation for         *

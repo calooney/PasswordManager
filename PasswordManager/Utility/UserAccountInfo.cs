@@ -1,11 +1,11 @@
 ﻿/****************************************************************************
  *                                                                          *
- *  File:        UserAccountInfo.cs                                                    *
+ *  File:        UserAccountInfo.cs                                         *
  *  Copyright:   (c) 2022, Draganescu Bianca-Andreea                        *
  *  E-mail:      bianca-andreea.draganescu@student.tuiasi.ro                *
  *  Description: In this file you will find the implementation for          *
- *               a UserAccountInfo class that will be used in               *
- *               main application foar data data transfer between entitie.  *
+ *               a UserAccountInfo class that will be used in the           *
+ *               main application for data transfer between entities.       *
  *                                                                          *
  ****************************************************************************/
 

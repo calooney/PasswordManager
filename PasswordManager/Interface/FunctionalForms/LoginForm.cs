@@ -4,7 +4,7 @@
  *  Copyright:   (c) 2022, Tarziu Matei-Stefan                              *
  *  E-mail:      matei-stefan.tarziu@student.tuiasi.ro                      *
  *  Description: In this file you will find the implementation for          *
- *               Login Formular.                                            *
+ *               the Login form of the application.                         *
  *                                                                          *
  ****************************************************************************/
 

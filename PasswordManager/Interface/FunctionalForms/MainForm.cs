@@ -1,10 +1,11 @@
 ﻿/****************************************************************************
  *                                                                          *
- *  File:        MainForm.cs                                              *
+ *  File:        MainForm.cs                                                *
  *  Copyright:   (c) 2022, Tarziu Matei-Stefan                              *
  *  E-mail:      matei-stefan.tarziu@student.tuiasi.ro                      *
  *  Description: In this file you will find the implementation for          *
- *               main user interaction window formular                      *
+ *               the main window form, in which the user can manage all     *
+ *               of their saved credentials by way of an SQL database.      *
  *                                                                          *
  ****************************************************************************/
 

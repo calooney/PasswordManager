@@ -4,8 +4,8 @@
  *  Copyright:   (c) 2022, Draganescu Bianca-Andreea                        *
  *  E-mail:      bianca-andreea.draganescu@student.tuiasi.ro                *
  *  Description: In this file you will find the implementation for          *
- *               a User class that will be used in main application         *
- *               for data data transfer between entities.                   *
+ *               a User class that will be used in the main                 *
+ *               application for data transfer between entities.            *
  *                                                                          *
  ****************************************************************************/
 
