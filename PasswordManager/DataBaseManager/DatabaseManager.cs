@@ -27,7 +27,9 @@ namespace DataBaseManager
 
         private static readonly object _lock = new object ();
 
-        //vom accesa instanta bazei de date doar prin intermediul acestei proprietati
+        /// <summary>
+        /// Vom accesa instanta bazei de date doar prin intermediul acestei proprietati
+        /// </summary>
         public static DatabaseManager Instance
         {
             get
@@ -47,7 +49,10 @@ namespace DataBaseManager
         }
 
         public SqlConnection Conn { get => _conn;}
-        //constructorul privat al clasei DatabaseManager
+
+        /// <summary>
+        ///  Constructorul privat al clasei DatabaseManager
+        /// </summary>
         private DatabaseManager()
         {
             string connetionString;
@@ -62,7 +67,13 @@ namespace DataBaseManager
             _conn.Open();
             Console.WriteLine("Connected to database!");
         }
-        //metoda cu ajutorul careia se adauga un user in baza de date
+
+
+        /// <summary>
+        /// Metoda cu ajutorul careia se adauga un user in baza de date
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns>True pentru succes, false pentru fail</returns>
         public bool AddUser(User user)
         {
             bool result = true;
@@ -85,7 +96,12 @@ namespace DataBaseManager
 
         }
 
-        //pentru a accesa credentialele si datele personale ale utilizatorului
+
+        /// <summary>
+        /// pentru a accesa credentialele si datele personale ale utilizatorului
+        /// </summary>
+        /// <param name="username"></param>
+        /// <returns>Un obiect de tipul User daca username-ul este in baza de date, null altfel</returns>
         public User GetUser(string username)
         {
             SqlCommand sqlCommand;
@@ -110,8 +126,14 @@ namespace DataBaseManager
             return user;
         }
 
-        //adauga un cont al utilizatorului in tabela Accounts
-        public  int AddPlatformInfo(User user, UserAccountInfo info)
+        //
+        /// <summary>
+        /// adauga un cont al utilizatorului in tabela Accounts
+        /// </summary>
+        /// <param name="user"></param>
+        /// <param name="info"></param>
+        /// <returns>Id-ul din baza de date a contului adaugat</returns>
+        public int AddPlatformInfo(User user, UserAccountInfo info)
         {
             SqlCommand sqlCommand;
 
@@ -145,7 +167,13 @@ namespace DataBaseManager
             return id;
 
         }
-        //metoda care returneaza o lista cu toate conturile utilizatorului salvate in aplicatie
+
+
+        /// <summary>
+        /// metoda care returneaza o lista cu toate conturile utilizatorului salvate in aplicatie
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns>O lista cu obiecte de tipul UserAccountInfo</returns>
         public List<UserAccountInfo> GetUserAccounts(User user)
         {
             List<UserAccountInfo> accountList = new List<UserAccountInfo>();
@@ -167,7 +195,13 @@ namespace DataBaseManager
 
             return accountList;
         }
-        //actualizarea conturilor din baza de date
+
+
+        /// <summary>
+        /// actualizarea conturilor din baza de date
+        /// </summary>
+        /// <param name="info"></param>
+        /// <returns>True pentru succes, false pentru fail</returns>
         public bool UpdateAccountInfo(UserAccountInfo info)
         {
             SqlCommand sqlCommand;
@@ -193,7 +227,11 @@ namespace DataBaseManager
             return result;
         }
 
-        //stergerea unui cont din baza de date
+        /// <summary>
+        /// stergerea unui cont din baza de date
+        /// </summary>
+        /// <param name="info"></param>
+        /// <returns>True pentru succes, false pentru fail</returns>
         public bool DeleteAccount(UserAccountInfo info)
         {
             SqlCommand sqlCommand;
@@ -221,8 +259,12 @@ namespace DataBaseManager
             return result;
         }
 
-        // metoda care sterge contul utilizatorului din aplicatie utilizata
-        // cu precadere in testarea unitatilor, pentru a asigura integritatea datelor
+        /// <summary>
+        /// metoda care sterge contul utilizatorului din aplicatie utilizata
+        /// cu precadere in testarea unitatilor, pentru a asigura integritatea datelor
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns>True pentru succes, false pentru fail</returns>
         public bool DeleteUser(User user)
         {
             SqlCommand sqlCommand;
